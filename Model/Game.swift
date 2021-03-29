@@ -6,9 +6,12 @@
 //
 
 import Foundation
+import SwiftUI
 import Combine
 
 class Game: Decodable, Identifiable {
+    
+    static let unknownImage : UIImage = UIImage(systemName: "questionmark.square.fill")!
     
     // id of the game
     private(set) var id : Int

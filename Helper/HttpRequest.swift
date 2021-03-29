@@ -39,19 +39,19 @@ struct GameData: Codable{
 
 struct HttpRequest {
 
-    static func loadFestivalFromAPI(url surl: String, endofrequest: @escaping (Result<Festival,HttpRequestError>) -> Void){
+    static func loadItemsFromAPI<T>(url surl: String, endofrequest: @escaping (Result<T,HttpRequestError>) -> Void) where T : Decodable {
         guard let url = URL(string: surl) else {
             endofrequest(.failure(.badURL(surl)))
             return
         }
-        self.loadFestivalFromAPI(url: url, endofrequest: endofrequest)
+        self.loadItemsFromAPI(url: url, endofrequest: endofrequest)
     }
     
-    static func loadFestivalFromAPI(url: URL, endofrequest: @escaping (Result<Festival,HttpRequestError>) -> Void){
-        self.loadFestivalFromJsonData(url: url, endofrequest: endofrequest)
+    static func loadItemsFromAPI<T>(url: URL, endofrequest: @escaping (Result<T,HttpRequestError>) -> Void) where T : Decodable {
+        self.loadItemsFromJsonData(url: url, endofrequest: endofrequest)
     }
     
-    private static func loadFestivalFromJsonData(url: URL, endofrequest: @escaping (Result<Festival,HttpRequestError>) -> Void){
+    private static func loadItemsFromJsonData<T>(url: URL, endofrequest: @escaping (Result<T,HttpRequestError>) -> Void) where T : Decodable {
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data {
@@ -61,21 +61,21 @@ struct HttpRequest {
                 
                 let decodedData : Decodable?
                 
-                decodedData = try? JSONDecoder().decode(Festival.self, from: data)
+                decodedData = try? JSONDecoder().decode(T.self, from: data)
                 
                 guard let decodedResponse = decodedData else {
                     print("Je suis httpRequest et je n'ai pas réussi à décoder mes données")
                     DispatchQueue.main.async { endofrequest(.failure(.JsonDecodingFailed)) }
                     return
                 }
-                var festival : Festival
-                festival = (decodedResponse as! Festival)
+                var resultat : T
+                resultat = (decodedResponse as! T)
                 
-                print("Je suis httpRequest et j'ai récupéré un festival : ")
-                print(festival)
+                print("Je suis httpRequest et j'ai récupéré des données : ")
+                print(resultat)
                 
                 DispatchQueue.main.async {
-                    endofrequest(.success(festival))
+                    endofrequest(.success(resultat))
                 }
             }
             else{
@@ -102,5 +102,46 @@ struct HttpRequest {
             }
         }.resume()
     }
+    
+    static func httpGetObject<T>(from surl: String, initFromData: @escaping (Data) -> T?, endofrequest: @escaping (Result<T,HttpRequestError>) -> Void){
+            guard let url = URL(string: surl) else {
+                endofrequest(.failure(.badURL(surl)))
+                return
+            }
+            let request = URLRequest(url: url)
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                if let data = data {
+                    DispatchQueue.main.async {
+                        guard let result = initFromData(data) else {
+                            endofrequest(.failure(.initDataFailed))
+                            return
+                        }
+                        endofrequest(.success(result))
+                    }
+                }
+                else{
+                    DispatchQueue.main.async {
+                        if let error = error {
+                            guard let error = error as? URLError else {
+                                endofrequest(.failure(.unknown))
+                                return
+                            }
+                            endofrequest(.failure(.failingURL(error)))
+                        }
+                        else{
+                            guard let response = response as? HTTPURLResponse else{
+                                endofrequest(.failure(.unknown))
+                                return
+                            }
+                            guard response.statusCode == 200 else {
+                                endofrequest(.failure(.requestFailed))
+                                return
+                            }
+                            endofrequest(.failure(.unknown))
+                        }
+                    }
+                }
+            }.resume()
+        }
     
 }

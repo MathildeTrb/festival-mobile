@@ -11,6 +11,7 @@ import SwiftUI
 class DisplayFestivalIntent {
     
     @ObservedObject var festival : DisplayFestivalViewModel
+
     
     init(festival: DisplayFestivalViewModel) {
         self.festival = festival
@@ -19,7 +20,7 @@ class DisplayFestivalIntent {
     func loadFestival(url : String){
         print("Je suis l'intente et je fais ma requête : \(url)")
         festival.displayFestivalState = .loading(url)
-        HttpRequest.loadFestivalFromAPI(url: url, endofrequest: httpJsonLoaded)
+        HttpRequest.loadItemsFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
     
     func httpJsonLoaded(result: Result<Festival, HttpRequestError>){

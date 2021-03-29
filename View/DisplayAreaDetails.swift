@@ -27,7 +27,7 @@ struct DisplayAreaDetails: View {
                     })
                 }
             }
-            
+            			
         }
     }
 }

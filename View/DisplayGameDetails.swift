@@ -23,8 +23,8 @@ struct DisplayGameDetails: View {
     }
 }
 
-struct DisplayGameDetails_Previews: PreviewProvider {
-    static var previews: some View {
-        DisplayGameDetails(game: Game(id: 2, name: "assassin's creed", minNumberPlayer: 2, maxNumberPlayer: 4, minYearPlayer: 17, duration: 156, isPrototype: true, manualGame: " ", imageUrl: " ", type: GameType(id: 2, label: "jeux d'avanture"), editor: Editor(id: 3, name: "DUFOUR and co")))
-    }
-}
+//struct DisplayGameDetails_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DisplayGameDetails(game: Game(id: 2, name: "assassin's creed", minNumberPlayer: 2, maxNumberPlayer: 4, minYearPlayer: 17, duration: 156, isPrototype: true, manualGame: " ", imageUrl: " ", type: GameType(id: 2, label: "jeux d'avanture"), editor: Editor(id: 3, name: "DUFOUR and co")))
+//    }
+//}
