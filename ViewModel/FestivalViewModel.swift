@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 enum DisplayFestivalState : CustomStringConvertible{
     case ready
@@ -26,10 +27,30 @@ enum DisplayFestivalState : CustomStringConvertible{
     }
 }
 
-class DisplayFestivalViewModel: ObservableObject{
+class FestivalViewModel: ObservableObject{
     
-    private(set) var model: Festival
+    private(set) var model : Festival
     
+    var id : Int {
+        return model.id
+    }
+    
+    var name : String {
+        return model.name
+    }
+    
+    var imageUrl : String? {
+        return model.imageUrl
+    }
+    
+    var areas : [AreaViewModel]{
+        var res = [AreaViewModel]()
+        for area in model.areas {
+            res.append(AreaViewModel(area))
+        }
+        return res
+    }
+        
     @Published var displayFestivalState : DisplayFestivalState = .ready{
         didSet{
             switch self.displayFestivalState {

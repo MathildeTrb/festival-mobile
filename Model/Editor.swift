@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class Editor: Decodable {
+class Editor: Decodable, ObservableObject {
     
     // id of the editor
     private(set) var id: Int

@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class GameType: Decodable {
+class GameType: Decodable, ObservableObject {
     
     //id of the type
     private(set) var id: Int

@@ -8,12 +8,12 @@
 import Foundation
 import SwiftUI
 
-class DisplayFestivalIntent {
+class FestivalIntent {
     
-    @ObservedObject var festival : DisplayFestivalViewModel
+    @ObservedObject var festival : FestivalViewModel
 
     
-    init(festival: DisplayFestivalViewModel) {
+    init(festival: FestivalViewModel) {
         self.festival = festival
     }
     

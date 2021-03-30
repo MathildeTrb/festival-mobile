@@ -10,15 +10,15 @@ import SwiftUI
 struct MainView: View {
     
     @State private var tabSelected = 0
-    @ObservedObject var displayFestival: DisplayFestivalViewModel
+    @ObservedObject var displayFestival: FestivalViewModel
     
-    var intent : DisplayFestivalIntent
+    var intent : FestivalIntent
     
     private var url : String = "https://festival-jeu.herokuapp.com/api/festivals/current/games"
     
-    init(displayFestival: DisplayFestivalViewModel) {
+    init(displayFestival: FestivalViewModel) {
         self.displayFestival = displayFestival
-        self.intent = DisplayFestivalIntent(festival: displayFestival)
+        self.intent = FestivalIntent(festival: displayFestival)
         let _ = self.displayFestival.$displayFestivalState.sink(receiveValue: stateChanged)
         endOfInit()
     }
@@ -48,13 +48,19 @@ struct MainView: View {
                 }.tag(0)
             DisplayFestivalView(displayFestival: displayFestival)
                 .tabItem{
-                    Label("Infos Zones", systemImage: "gamecontroller")
+                    Label("Zones", systemImage: "rectangle.dashed.badge.record")
                     
                 }.tag(1)
-            DisplayGameListView()
+            GameListView(gameList: GameListViewModel(gameList: GameList()))
                 .tabItem{
-                    Label("Infos jeux", systemImage: "gamecontroller")
+                    Label("Jeux", systemImage: "gamecontroller")
                 }.tag(2)
+            EditorListView()
+                .tabItem {
+                    Label("Editeurs", systemImage: "figure.wave")
+                }
+                .tag(3)
+            
         }
     }
 }

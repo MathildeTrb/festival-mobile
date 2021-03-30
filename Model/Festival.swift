@@ -8,13 +8,9 @@
 import Foundation
 import Combine
 
-struct SFestival: Decodable {
-    // id of the festival
-    private(set) var id : Int
-    // name of the festival
-    private(set) var name : String
-    // image url of the festival
-    private(set) var imageUrl : String
+protocol FestivalDelegate {
+    func newFestival()
+    
 }
 
 class Festival: Decodable, ObservableObject {
@@ -40,5 +36,6 @@ class Festival: Decodable, ObservableObject {
         self.name = festival.name
         self.imageUrl = festival.imageUrl
         self.areas = festival.areas
+        
     }
 }

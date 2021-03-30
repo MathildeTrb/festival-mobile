@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-class Game: Decodable, Identifiable {
+class Game: Decodable, Identifiable, ObservableObject {
     
     static let unknownImage : UIImage = UIImage(systemName: "questionmark.square.fill")!
     

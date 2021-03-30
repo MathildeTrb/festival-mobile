@@ -7,8 +7,9 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
-class Area: Decodable, Identifiable {
+class Area: Decodable, Identifiable, ObservableObject {
     
     // id of the area
     private(set) var id : Int

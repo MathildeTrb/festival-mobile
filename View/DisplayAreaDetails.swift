@@ -9,9 +9,9 @@ import SwiftUI
 
 struct DisplayAreaDetails: View {
     
-    var area : Area
+    var area : AreaViewModel
     
-    init(area: Area) {
+    init(area: AreaViewModel) {
         self.area = area
     }
     
@@ -32,8 +32,8 @@ struct DisplayAreaDetails: View {
     }
 }
 
-struct DisplayAreaDetails_Previews: PreviewProvider {
-    static var previews: some View {
-        DisplayAreaDetails(area: Area(id: 2, label: "je suis un super espace", games: []))
-    }
-}
+//struct DisplayAreaDetails_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DisplayAreaDetails(area: Area(id: 2, label: "je suis un super espace", games: []))
+//    }
+//}

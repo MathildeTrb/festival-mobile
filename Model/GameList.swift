@@ -2,16 +2,23 @@
 //  GameList.swift
 //  festival-mobile
 //
-//  Created by user188238 on 3/29/21.
+//  Created by user188238 on 3/30/21.
 //
 
 import Foundation
 
-class GameList {
+protocol GameListDelegate {
+    func newGameList()
+}
+
+class GameList: ObservableObject {
+    
+    var delegate: GameListDelegate?
     
     private(set) var games = [Game]()
     
     func new(games: [Game]) {
         self.games = games
+        self.delegate?.newGameList()
     }
 }

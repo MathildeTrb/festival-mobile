@@ -8,17 +8,17 @@
 import Foundation
 import SwiftUI
 
-class DisplayGameListIntent {
+class GameListIntent {
     
-    @ObservedObject var games: DisplayGameListViewModel
+    @ObservedObject var gameList: GameListViewModel
     
-    init(games: DisplayGameListViewModel) {
-        self.games = games
+    init(gameList: GameListViewModel) {
+        self.gameList = gameList
     }
     
     func loadGames(url: String) {
         print("je suis dans l'intent et je fais ma requête : \(url)")
-        games.displayGameListState = .loading(url)
+        gameList.gameListState = .loading(url)
         HttpRequest.loadItemsFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
     
@@ -27,9 +27,9 @@ class DisplayGameListIntent {
         switch result {
         case let .success(data):
             print("success \(data)")
-            games.displayGameListState = .loaded(data)
-        case let.failure(error):
-            games.displayGameListState = .loadingError(error)
+            gameList.gameListState = .loaded(data)
+        case let .failure(error):
+            gameList.gameListState = .loadingError(error)
         }
     }
     

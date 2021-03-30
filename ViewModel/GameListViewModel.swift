@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum DisplayGameListState: CustomStringConvertible {
+enum GameListState: CustomStringConvertible {
     
     case ready
     case loading(String)
     case loaded([Game])
     case loadingError(Error)
-    case new([Game])
+    case new([GameViewModel])
 
     var description: String{
         switch self {
@@ -26,17 +26,18 @@ enum DisplayGameListState: CustomStringConvertible {
     }
 }
 
-class DisplayGameListViewModel: ObservableObject {
+class GameListViewModel: ObservableObject, GameListDelegate {
     
-    private(set) var model = [Game]()
+    private(set) var model: GameList
     
-    @Published var displayGameListState: DisplayGameListState = .ready {
+    private(set) var games = [GameViewModel]()
+    
+    @Published var gameListState: GameListState = .ready {
         didSet {
-            switch displayGameListState {
+            switch gameListState {
             case let .loaded(data):
                 print(data)
-                model.append(contentsOf: data)
-                displayGameListState = .new(model)
+                model.new(games: data)
             case .loadingError:
                 print("error")
             default:
@@ -45,7 +46,18 @@ class DisplayGameListViewModel: ObservableObject {
         }
     }
     
-    init(_ games: [Game]) {
-        self.model = games
+    init(gameList: GameList) {
+        self.model = gameList
+        self.model.delegate = self
+    }
+    
+    func newGameList() {
+        self.games.removeAll()
+        
+        for game in self.model.games {
+            self.games.append(GameViewModel(game))
+        }
+        
+        self.gameListState = .new(self.games)
     }
 }

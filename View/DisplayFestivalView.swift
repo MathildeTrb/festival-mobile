@@ -9,15 +9,15 @@ import SwiftUI
 
 struct DisplayFestivalView: View {
     
-    @ObservedObject var displayFestival: DisplayFestivalViewModel
+    @ObservedObject var displayFestival: FestivalViewModel
     @State var textSearch = ""
     
-    init(displayFestival: DisplayFestivalViewModel) {
+    init(displayFestival: FestivalViewModel) {
         self.displayFestival = displayFestival
         UITableView.appearance().backgroundColor = .clear
     }
     
-    private func filterSearch(area : Area) -> Bool {
+    private func filterSearch(area : AreaViewModel) -> Bool {
         var ret = true
         if !textSearch.isEmpty {
             ret = area.label.contains(textSearch)
@@ -29,14 +29,14 @@ struct DisplayFestivalView: View {
         return NavigationView{
             VStack{
                 Spacer().frame(height: 50)
-                Text("Bienvenue : \(displayFestival.model.name)")
+                Text("Bienvenue : \(displayFestival.name)")
                 Text("Voici les différentes zones du festival")
                 Spacer().frame(height: 50)
                 TextField("recherche d'une zone", text: $textSearch).font(.footnote).padding(10).background(Color.white)
                 Spacer().frame(height:50)
                 ZStack{
                     List{
-                        ForEach(self.displayFestival.model.areas.filter(filterSearch)){area in
+                        ForEach(self.displayFestival.areas.filter(filterSearch)){area in
                             NavigationLink(
                                 destination: DisplayAreaDetails(area: area),
                                 label: {

@@ -9,9 +9,9 @@ import SwiftUI
 
 struct DisplayGameDetails: View {
     
-    var game : Game
+    var game : GameViewModel
     
-    init(game: Game) {
+    init(game: GameViewModel) {
         self.game = game
     }
     
