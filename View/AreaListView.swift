@@ -32,12 +32,8 @@ struct AreaListView: View {
     
     func stateChanged(state: AreaListState) {
         switch state {
-        case let .loading(url):
-            print("area data is loading")
-            //TODO : faire quelque chose
         case .new:
-            print("areas data arrived")
-            // revenir à ready
+            intent.areaLoaded()
         default:
             return
         }

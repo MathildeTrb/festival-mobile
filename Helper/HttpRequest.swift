@@ -33,10 +33,6 @@ enum HttpRequestError : Error, CustomStringConvertible{
     }
 }
 
-struct GameData: Codable{
-    
-}
-
 struct HttpRequest {
 
     static func loadItemsFromAPI<T>(url surl: String, endofrequest: @escaping (Result<T,HttpRequestError>) -> Void) where T : Decodable {

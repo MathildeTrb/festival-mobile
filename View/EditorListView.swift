@@ -20,6 +20,7 @@ struct EditorListView: View {
     init(editorList: EditorListViewModel){
         self.editorList = editorList
         self.intent = EditorListIntent(editorList: editorList)
+        UITableView.appearance().backgroundColor = .clear
         let _ = editorList.$editorListState.sink(receiveValue: stateChanged)
         endOfinit()
     }
@@ -30,10 +31,8 @@ struct EditorListView: View {
     
     func stateChanged(state: EditorListState){
         switch state{
-        case let .loading(url):
-            print("is loading url : \(url)")
         case .new:
-            print("editors data arrived")
+            intent.editorsLoaded()
         default:
             return
         }
@@ -52,27 +51,27 @@ struct EditorListView: View {
 
     var body: some View {
         return NavigationView{
-        VStack {
-                Spacer().frame(height:50)
-                Text("Liste des éditeurs du festival")
-                Spacer().frame(height:50)
-                TextField("Recherche d'un éditeur", text:
-                            $textSearch).font(.footnote).padding(10).background(Color.white)
-                Spacer().frame(height: 50)
-            ZStack{
-                List{
-                    ForEach(self.editorList.editors.filter(filterSearch)){
-                        editor in
-                        NavigationLink(
-                            destination: GameEditorListView(editor: editor, gameEditorList: GameEditorListViewModel()),
-                            label:{
-                                Text("\(editor.name)")
-                            }
-                        )
+            VStack {
+                    Spacer().frame(height:50)
+                    Text("Liste des éditeurs du festival")
+                    Spacer().frame(height:50)
+                    TextField("Recherche d'un éditeur", text:
+                                $textSearch).font(.footnote).padding().background(Color.white)
+                    Spacer().frame(height: 50)
+                ZStack{
+                    List{
+                        ForEach(self.editorList.editors.filter(filterSearch)){
+                            editor in
+                            NavigationLink(
+                                destination: GameEditorListView(editor: editor, gameEditorList: GameEditorListViewModel()),
+                                label:{
+                                    Text("\(editor.name)")
+                                }
+                            )
+                        }
                     }
                 }
-            }
-        }
-        }
+            }.navigationTitle("Informations éditeurs").background(Color.green.opacity(0.1))
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }

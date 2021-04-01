@@ -21,6 +21,10 @@ class FestivalIntent {
         festival.displayFestivalState = .loading(url)
         HttpRequest.loadItemsFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
+
+    func FestivalLoaded () {
+        festival.displayFestivalState = .ready
+    }
     
     func httpJsonLoaded(result: Result<Festival, HttpRequestError>){
         switch result{

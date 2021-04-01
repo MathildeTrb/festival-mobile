@@ -20,6 +20,10 @@ class GameEditorListIntent {
         gameEditorList.gameEditorListState = .loading(url)
         HttpRequest.loadItemsFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
+
+    func gamesLoaded(){
+        gameEditorList.gameEditorListState = .ready
+    }
     
     func httpJsonLoaded(result: Result<[Game], HttpRequestError>) {
         

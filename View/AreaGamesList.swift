@@ -18,7 +18,7 @@ struct AreaGamesList: View {
     var body: some View {
         VStack {
             Spacer().frame(height: 50)
-            Text("Vous recherchez les jeux de la zone \(area.label)")
+            Text("Vous recherchez les jeux de la zone \(area.label)").padding()
             Spacer().frame(height: 50)
             List{
                 ForEach(self.area.games){game in
@@ -30,7 +30,7 @@ struct AreaGamesList: View {
                 }
             }
             			
-        }.navigationTitle("\(area.label)").padding()
+        }.navigationTitle("\(area.label)")
     }
 }
 

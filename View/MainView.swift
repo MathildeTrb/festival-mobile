@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    @State private var tabSelected = 1
+    @State private var tabSelected = 0
     @ObservedObject var displayFestival: FestivalViewModel
     
     var intent : FestivalIntent
@@ -19,11 +19,21 @@ struct MainView: View {
     init(displayFestival: FestivalViewModel) {
         self.displayFestival = displayFestival
         self.intent = FestivalIntent(festival: displayFestival)
+        let _  = self.displayFestival.$displayFestivalState.sink(receiveValue: stateChanged)
         endOfInit()
     }
     
     func endOfInit(){
         self.intent.loadFestival(url: url)
+    }
+
+    func stateChanged(state: DisplayFestivalState){
+        switch state {
+        case .new:
+            self.intent.FestivalLoaded()
+        default:
+            break
+        }
     }
     
     var body: some View {

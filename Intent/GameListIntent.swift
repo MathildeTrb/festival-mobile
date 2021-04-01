@@ -20,6 +20,10 @@ class GameListIntent {
         gameList.gameListState = .loading(url)
         HttpRequest.loadItemsFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
+
+    func gameLoaded() {
+        gameList.gameListState = .ready
+    }
     
     func httpJsonLoaded(result: Result<[Game], HttpRequestError>) {
         

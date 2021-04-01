@@ -30,10 +30,8 @@ struct GameListView: View {
     
     func stateChanged(state: GameListState) {
         switch state {
-        case let .loading(url):
-            print("is loading url : \(url)")
         case .new:
-            print("games data arrived")
+            intent.gameLoaded()
         default:
             return
         }
@@ -55,7 +53,7 @@ struct GameListView: View {
                 Spacer().frame(height: 50)
                 Text("Liste de jeux du festival")
                 Spacer().frame(height: 50)
-                TextField("Recherche d'un jeu", text: $textSearch).font(.footnote).padding(10).background(Color.white)
+                TextField("Recherche d'un jeu", text: $textSearch).font(.footnote).padding(10).background(Color.white).padding()
                 Spacer().frame(height: 50)
                 ZStack {
                     List {

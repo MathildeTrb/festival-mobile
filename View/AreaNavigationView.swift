@@ -35,18 +35,7 @@ struct AreaNavigationView: View {
     
     init(displayFestival: FestivalViewModel) {
         self.displayFestival = displayFestival
-        let _ = self.displayFestival.$displayFestivalState.sink(receiveValue: stateChanged)
-    }
-    
-    func stateChanged(state: DisplayFestivalState){
-        switch state {
-        case .loading:
-            self.stateViewModel = "loading"
-        case .new:
-            self.stateViewModel = "données ok"
-        default:
-            return
-        }
+        UITableView.appearance().backgroundColor = .clear
     }
     
     private func filterSearch(area : AreaViewModel) -> Bool {
@@ -64,7 +53,7 @@ struct AreaNavigationView: View {
                 Text("Bienvenue : \(displayFestival.name)")
                 Text("Voici les différentes zones du festival")
                 Spacer().frame(height: 50)
-                TextField("recherche d'une zone", text: $textSearch).font(.footnote).padding(10).background(Color.white)
+                TextField("recherche d'une zone", text: $textSearch).font(.footnote).padding(10).background(Color.white).padding()
                 Spacer().frame(height:50)
                 ZStack{
                     List{
@@ -78,8 +67,8 @@ struct AreaNavigationView: View {
                     }
                     ErrorView(state: searchState)
                 }
-            }.navigationTitle("Information Zone")
-        }.navigationViewStyle(StackNavigationViewStyle()).padding()
+            }.navigationTitle("Information Zone").background(Color.purple.opacity(0.1))
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

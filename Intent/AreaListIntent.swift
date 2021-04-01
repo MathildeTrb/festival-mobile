@@ -20,6 +20,10 @@ class AreaListIntent {
         areaList.areaListState = .loading(url)
         HttpRequest.loadItemsFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
+
+    func areaLoaded(){
+        areaList.areaListState = .ready
+    }
     
     func httpJsonLoaded(result: Result<[Area], HttpRequestError>) {
         

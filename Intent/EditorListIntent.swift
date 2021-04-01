@@ -20,6 +20,10 @@ class EditorListIntent {
         editorList.editorListState = .loading(url)
         HttpRequest.loadItemsFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
+
+    func editorsLoaded(){
+        editorList.editorListState = .ready
+    }
     
     func httpJsonLoaded(result: Result<[Editor], HttpRequestError>){
         

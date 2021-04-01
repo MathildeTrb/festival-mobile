@@ -32,10 +32,8 @@ struct GameEditorListView: View {
     
     func stateChanged(state: GameEditorListState){
         switch state {
-        case .loading:
-            print("games are coming")
         case .new:
-            print("games data arrived")
+            intent.gamesLoaded()
         default:
             return
         }
