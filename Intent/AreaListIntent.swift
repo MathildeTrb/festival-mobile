@@ -25,7 +25,6 @@ class AreaListIntent {
         
         switch result {
         case let .success(data):
-            print("success \(data)")
             areaList.areaListState = .loaded(data)
         case let .failure(error):
             areaList.areaListState = .loadingError(error)

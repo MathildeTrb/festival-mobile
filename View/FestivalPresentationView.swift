@@ -8,13 +8,29 @@
 import SwiftUI
 
 struct FestivalPresentationView: View {
+    
+    @ObservedObject var festival : FestivalViewModel
+    
+    init(_ festival : FestivalViewModel) {
+        self.festival = festival
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            festival.image?
+                .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
+                .overlay(RoundedRectangle(cornerRadius: 25, style: .continuous).stroke(Color.white, lineWidth: 4))
+                .shadow(radius: 7)
+                .offset(y: -130)
+                .padding(.bottom, -130)
+            Spacer().frame(height: 50)
+            Text("\(festival.description)").multilineTextAlignment(.center)
+        }.padding()
     }
 }
 
-struct FestivalPresentationView_Previews: PreviewProvider {
-    static var previews: some View {
-        FestivalPresentationView()
-    }
-}
+//struct FestivalPresentationView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FestivalPresentationView()
+//    }
+//}

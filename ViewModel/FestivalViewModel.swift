@@ -27,6 +27,28 @@ enum DisplayFestivalState : CustomStringConvertible{
     }
 }
 
+struct AsyncFestivalImage: View {
+    
+    @ObservedObject private var festival: FestivalViewModel
+    
+    init(_ festival: FestivalViewModel) {
+        self.festival = festival
+    }
+    
+    var body: some View {
+        content.onAppear(perform: festival.load)
+    }
+    
+    private var content: some View {
+        if let image = festival.imageUI {
+            return Image(uiImage: image)
+        }
+        else {
+            return Image(uiImage: Festival.unknownImage)
+        }
+    }
+}
+
 class FestivalViewModel: ObservableObject{
     
     private(set) var model : Festival
@@ -50,6 +72,22 @@ class FestivalViewModel: ObservableObject{
         }
         return res
     }
+    
+    var imageUI: UIImage?{
+        didSet{
+            self.image = AsyncFestivalImage(self)
+        }
+    }
+    
+    var description: String{
+        if let description = model.description {
+            return description
+        }
+        return "Bienvenue"
+    }
+    
+    
+    @Published var image: AsyncFestivalImage?
         
     @Published var displayFestivalState : DisplayFestivalState = .ready{
         didSet{
@@ -57,6 +95,7 @@ class FestivalViewModel: ObservableObject{
             case let .loaded(data):
                 print(data)
                 model.new(festival: data)
+                load()
                 displayFestivalState = .new(model)
             case .loadingError:
                 print("error")
@@ -69,6 +108,27 @@ class FestivalViewModel: ObservableObject{
     
     init(_ festival : Festival) {
         self.model = festival
+    }
+    
+    private func imageLoaded(result: Result<UIImage, HttpRequestError>) {
+        switch result {
+        case let .success(data):
+            print("C UNE REUSSITE")
+            self.imageUI = ImageHelper.resizeImage(image: data, targetSize: CGSize(width: 400.0, height: 400.0))
+        case let .failure(error):
+            print(error)
+            self.imageUI = Festival.unknownImage
+        }
+    }
+    
+    func load() -> Void {
+        guard let url = self.imageUrl else {
+            self.imageUI = Festival.unknownImage
+            return
+        }
+        print("JE SUIS TON URL")
+        print(url)
+        HttpRequest.httpGetObject(from: url, initFromData: { (data: Data) -> UIImage? in return UIImage(data: data)}, endofrequest: imageLoaded)
     }
     
 }

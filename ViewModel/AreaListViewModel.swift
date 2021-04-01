@@ -33,8 +33,7 @@ class AreaListViewModel: ObservableObject {
         didSet {
             switch areaListState {
             case let .loaded(data):
-                print(data)
-                
+        
                 for area in data {
                     areas.append(AreaViewModel(area))
                 }

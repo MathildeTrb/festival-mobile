@@ -35,7 +35,7 @@ class Game: Decodable, Identifiable, ObservableObject {
     private(set) var type: GameType
     // editor of the game
     private(set) var editor: Editor
-    
+        
     init(id: Int, name:String, minNumberPlayer: Int, maxNumberPlayer: Int, minYearPlayer: Int, duration: Int, isPrototype: Bool, manualGame: String, imageUrl: String, type: GameType, editor: Editor){
         self.id = id
         self.name = name
@@ -49,4 +49,6 @@ class Game: Decodable, Identifiable, ObservableObject {
         self.type = type
         self.editor = editor
     }
+    
+    
 }

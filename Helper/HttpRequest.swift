@@ -44,6 +44,9 @@ struct HttpRequest {
             endofrequest(.failure(.badURL(surl)))
             return
         }
+        do {
+            sleep(1)
+        }
         self.loadItemsFromAPI(url: url, endofrequest: endofrequest)
     }
     
@@ -56,23 +59,16 @@ struct HttpRequest {
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data {
                 
-                print("Je suis httpRequest et j'ai récupéré des données : ")
-                print(data)
-                
                 let decodedData : Decodable?
                 
                 decodedData = try? JSONDecoder().decode(T.self, from: data)
                 
                 guard let decodedResponse = decodedData else {
-                    print("Je suis httpRequest et je n'ai pas réussi à décoder mes données")
                     DispatchQueue.main.async { endofrequest(.failure(.JsonDecodingFailed)) }
                     return
                 }
                 var resultat : T
                 resultat = (decodedResponse as! T)
-                
-                print("Je suis httpRequest et j'ai récupéré des données : ")
-                print(resultat)
                 
                 DispatchQueue.main.async {
                     endofrequest(.success(resultat))

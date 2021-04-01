@@ -13,6 +13,8 @@ struct GameListView: View {
     
     var intent: GameListIntent
     
+    @State var textSearch: String = ""
+    
     private var url: String = "https://festival-jeu.herokuapp.com/api/games/current"
     
     init(gameList: GameListViewModel) {
@@ -37,15 +39,27 @@ struct GameListView: View {
         }
     }
     
+    private func filterSearch(game: GameViewModel) -> Bool {
+        var res: Bool = true
+        
+        if !textSearch.isEmpty {
+            res = game.name.contains(textSearch)
+        }
+        
+        return res
+    }
+    
     var body: some View {
         return NavigationView {
             VStack {
                 Spacer().frame(height: 50)
                 Text("Liste de jeux du festival")
-                
+                Spacer().frame(height: 50)
+                TextField("Recherche d'un jeu", text: $textSearch).font(.footnote).padding(10).background(Color.white)
+                Spacer().frame(height: 50)
                 ZStack {
                     List {
-                        ForEach(self.gameList.games) { game in
+                        ForEach(self.gameList.games.filter(filterSearch)) { game in
                             NavigationLink(
                                 
                                 destination: AreaListView(game: game, areaList: AreaListViewModel()),

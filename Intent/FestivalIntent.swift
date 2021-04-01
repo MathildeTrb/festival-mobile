@@ -18,7 +18,6 @@ class FestivalIntent {
     }
     
     func loadFestival(url : String){
-        print("Je suis l'intente et je fais ma requête : \(url)")
         festival.displayFestivalState = .loading(url)
         HttpRequest.loadItemsFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
@@ -26,7 +25,6 @@ class FestivalIntent {
     func httpJsonLoaded(result: Result<Festival, HttpRequestError>){
         switch result{
         case let .success(data):
-            print("success : \(data)")
             festival.displayFestivalState = .loaded(data)
         case let .failure(error):
             festival.displayFestivalState = .loadingError(error)

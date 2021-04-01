@@ -17,7 +17,6 @@ class GameListIntent {
     }
     
     func loadGames(url: String) {
-        print("je suis dans l'intent et je fais ma requête : \(url)")
         gameList.gameListState = .loading(url)
         HttpRequest.loadItemsFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
@@ -26,7 +25,6 @@ class GameListIntent {
         
         switch result {
         case let .success(data):
-            print("success \(data)")
             gameList.gameListState = .loaded(data)
         case let .failure(error):
             gameList.gameListState = .loadingError(error)

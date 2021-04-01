@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DisplayAreaDetails: View {
+struct AreaGamesList: View {
     
     var area : AreaViewModel
     
@@ -17,18 +17,20 @@ struct DisplayAreaDetails: View {
     
     var body: some View {
         VStack {
+            Spacer().frame(height: 50)
             Text("Vous recherchez les jeux de la zone \(area.label)")
+            Spacer().frame(height: 50)
             List{
                 ForEach(self.area.games){game in
                     NavigationLink(
-                            destination: DisplayGameDetails(game: game),
+                            destination: GameDetails(game: game),
                             label: {
                                 Text("\(game.name)")
                     })
                 }
             }
             			
-        }
+        }.navigationTitle("\(area.label)").padding()
     }
 }
 

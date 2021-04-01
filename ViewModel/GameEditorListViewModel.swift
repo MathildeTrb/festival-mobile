@@ -1,14 +1,13 @@
 //
-//  DisplayGameListViewModel.swift
+//  GameEditorListViewModel.swift
 //  festival-mobile
 //
-//  Created by user188238 on 3/29/21.
+//  Created by user188238 on 4/1/21.
 //
 
 import Foundation
 
-enum GameListState: CustomStringConvertible {
-    
+enum GameEditorListState: CustomStringConvertible {
     case ready
     case loading(String)
     case loaded([Game])
@@ -26,20 +25,20 @@ enum GameListState: CustomStringConvertible {
     }
 }
 
-class GameListViewModel: ObservableObject {
+class GameEditorListViewModel: ObservableObject {
         
     private(set) var games = [GameViewModel]()
     
-    @Published var gameListState: GameListState = .ready {
+    @Published var gameEditorListState: GameEditorListState = .ready {
         didSet {
-            switch gameListState {
+            switch gameEditorListState {
             case let .loaded(data):
                 
                 for game in data {
                     self.games.append(GameViewModel(game))
                 }
                 
-                self.gameListState = .new(self.games)
+                self.gameEditorListState = .new(self.games)
             case .loadingError:
                 print("error")
             default:

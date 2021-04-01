@@ -33,9 +33,11 @@ struct AreaListView: View {
     func stateChanged(state: AreaListState) {
         switch state {
         case let .loading(url):
-            print("is loading url : \(url)")
+            print("area data is loading")
+            //TODO : faire quelque chose
         case .new:
             print("areas data arrived")
+            // revenir à ready
         default:
             return
         }
@@ -44,7 +46,19 @@ struct AreaListView: View {
     var body: some View {
         VStack {
             
+            game.image
+                .clipShape(Circle())
+                .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                .shadow(radius: 7)
+                //.offset(y: -130)
+                //.padding(.bottom, -130)
+            
             Text("\(game.name)")
+            
+            Spacer()
+            
+            Text("Liste des zones")
+                .font(.title)
             
             List {
                 ForEach(self.areaList.areas) { area in
