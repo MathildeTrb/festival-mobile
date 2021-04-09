@@ -1,0 +1,715 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C1529FC260BE95D00FB2A02 /* AreaNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1529FB260BE95D00FB2A02 /* AreaNavigationView.swift */; };
+		5C152A04260BFB9000FB2A02 /* AreaGamesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C152A03260BFB9000FB2A02 /* AreaGamesList.swift */; };
+		5C37AD90261516F00057306B /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37AD8F261516F00057306B /* ImageHelper.swift */; };
+		5C50182A2612162100C3B6AA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5018292612162100C3B6AA /* MainView.swift */; };
+		5C50182F261216AB00C3B6AA /* FestivalPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C50182E261216AB00C3B6AA /* FestivalPresentationView.swift */; };
+		5C5304B526126B6300AF3B28 /* GameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5304B426126B6300AF3B28 /* GameListView.swift */; };
+		5C5304C226126CB200AF3B28 /* GameListIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5304C126126CB200AF3B28 /* GameListIntent.swift */; };
+		5C5304C72612707B00AF3B28 /* GameListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5304C62612707B00AF3B28 /* GameListViewModel.swift */; };
+		5C6BE25F2615A14A000B200E /* EditorListIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BE25E2615A14A000B200E /* EditorListIntent.swift */; };
+		5C6BE2792615BBBE000B200E /* GameEditorListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BE2782615BBBE000B200E /* GameEditorListViewModel.swift */; };
+		5C6BE27E2615BC9A000B200E /* GameEditorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BE27D2615BC9A000B200E /* GameEditorListView.swift */; };
+		5C6BE2832615BCED000B200E /* GameEditorListIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BE2822615BCED000B200E /* GameEditorListIntent.swift */; };
+		5C834DE6261480250096B348 /* EditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C834DE5261480250096B348 /* EditorViewModel.swift */; };
+		5CAFCC47260C98D200529B43 /* GameDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAFCC46260C98D200529B43 /* GameDetails.swift */; };
+		5CB8706226136C9200F9C65A /* AreaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB8706126136C9200F9C65A /* AreaListView.swift */; };
+		5CB870672613712D00F9C65A /* AreaListIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB870662613712D00F9C65A /* AreaListIntent.swift */; };
+		5CB8706C2613748A00F9C65A /* AreaListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB8706B2613748A00F9C65A /* AreaListViewModel.swift */; };
+		5CB870712613843400F9C65A /* EditorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB870702613843400F9C65A /* EditorListView.swift */; };
+		5CBD8DD326132DFF00C2F19D /* AreaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBD8DD226132DFF00C2F19D /* AreaViewModel.swift */; };
+		5CBD8DE82613302F00C2F19D /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBD8DE72613302F00C2F19D /* GameViewModel.swift */; };
+		5CBD8DF22613324300C2F19D /* EditorListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBD8DF12613324300C2F19D /* EditorListViewModel.swift */; };
+		5CBD8DFA2613325900C2F19D /* GameTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBD8DF92613325900C2F19D /* GameTypeViewModel.swift */; };
+		5CF15884260BE65600998A41 /* festival_mobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF15883260BE65600998A41 /* festival_mobileApp.swift */; };
+		5CF15886260BE65600998A41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF15885260BE65600998A41 /* ContentView.swift */; };
+		5CF15888260BE65700998A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF15887260BE65700998A41 /* Assets.xcassets */; };
+		5CF1588B260BE65700998A41 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF1588A260BE65700998A41 /* Preview Assets.xcassets */; };
+		5CF158C8260BE6FE00998A41 /* FestivalIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF158B8260BE6FD00998A41 /* FestivalIntent.swift */; };
+		5CF158C9260BE6FE00998A41 /* Festival.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF158BA260BE6FE00998A41 /* Festival.swift */; };
+		5CF158CA260BE6FE00998A41 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF158BB260BE6FE00998A41 /* Game.swift */; };
+		5CF158CB260BE6FE00998A41 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF158BC260BE6FE00998A41 /* GameType.swift */; };
+		5CF158CC260BE6FE00998A41 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF158BD260BE6FE00998A41 /* Area.swift */; };
+		5CF158CD260BE6FE00998A41 /* Editor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF158BE260BE6FE00998A41 /* Editor.swift */; };
+		5CF158CF260BE6FE00998A41 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF158C2260BE6FE00998A41 /* HttpRequest.swift */; };
+		5CF158D0260BE6FE00998A41 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF158C4260BE6FE00998A41 /* Preview Assets.xcassets */; };
+		5CF158D2260BE6FE00998A41 /* FestivalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF158C7260BE6FE00998A41 /* FestivalViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5CF15892260BE65700998A41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CF15878260BE65600998A41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CF1587F260BE65600998A41;
+			remoteInfo = "festival-mobile";
+		};
+		5CF1589D260BE65700998A41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CF15878260BE65600998A41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CF1587F260BE65600998A41;
+			remoteInfo = "festival-mobile";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5C1529F4260BE90500FB2A02 /* festival-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "festival-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1529F5260BE90500FB2A02 /* festival-mobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "festival-mobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1529F6260BE90500FB2A02 /* festival-mobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "festival-mobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1529FB260BE95D00FB2A02 /* AreaNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaNavigationView.swift; sourceTree = "<group>"; };
+		5C152A03260BFB9000FB2A02 /* AreaGamesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaGamesList.swift; sourceTree = "<group>"; };
+		5C37AD8F261516F00057306B /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		5C5018292612162100C3B6AA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		5C50182E261216AB00C3B6AA /* FestivalPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalPresentationView.swift; sourceTree = "<group>"; };
+		5C5304B426126B6300AF3B28 /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
+		5C5304C126126CB200AF3B28 /* GameListIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListIntent.swift; sourceTree = "<group>"; };
+		5C5304C62612707B00AF3B28 /* GameListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewModel.swift; sourceTree = "<group>"; };
+		5C6BE25E2615A14A000B200E /* EditorListIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorListIntent.swift; sourceTree = "<group>"; };
+		5C6BE2782615BBBE000B200E /* GameEditorListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEditorListViewModel.swift; sourceTree = "<group>"; };
+		5C6BE27D2615BC9A000B200E /* GameEditorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEditorListView.swift; sourceTree = "<group>"; };
+		5C6BE2822615BCED000B200E /* GameEditorListIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEditorListIntent.swift; sourceTree = "<group>"; };
+		5C834DE5261480250096B348 /* EditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewModel.swift; sourceTree = "<group>"; };
+		5CAFCC46260C98D200529B43 /* GameDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetails.swift; sourceTree = "<group>"; };
+		5CB8706126136C9200F9C65A /* AreaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaListView.swift; sourceTree = "<group>"; };
+		5CB870662613712D00F9C65A /* AreaListIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaListIntent.swift; sourceTree = "<group>"; };
+		5CB8706B2613748A00F9C65A /* AreaListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaListViewModel.swift; sourceTree = "<group>"; };
+		5CB870702613843400F9C65A /* EditorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorListView.swift; sourceTree = "<group>"; };
+		5CBD8DD226132DFF00C2F19D /* AreaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewModel.swift; sourceTree = "<group>"; };
+		5CBD8DE72613302F00C2F19D /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		5CBD8DF12613324300C2F19D /* EditorListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorListViewModel.swift; sourceTree = "<group>"; };
+		5CBD8DF92613325900C2F19D /* GameTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTypeViewModel.swift; sourceTree = "<group>"; };
+		5CF15883260BE65600998A41 /* festival_mobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = festival_mobileApp.swift; sourceTree = "<group>"; };
+		5CF15885260BE65600998A41 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5CF15887260BE65700998A41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5CF1588A260BE65700998A41 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5CF1588C260BE65700998A41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CF158B8260BE6FD00998A41 /* FestivalIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FestivalIntent.swift; sourceTree = "<group>"; };
+		5CF158BA260BE6FE00998A41 /* Festival.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Festival.swift; sourceTree = "<group>"; };
+		5CF158BB260BE6FE00998A41 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		5CF158BC260BE6FE00998A41 /* GameType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
+		5CF158BD260BE6FE00998A41 /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		5CF158BE260BE6FE00998A41 /* Editor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Editor.swift; sourceTree = "<group>"; };
+		5CF158C2260BE6FE00998A41 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		5CF158C4260BE6FE00998A41 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5CF158C7260BE6FE00998A41 /* FestivalViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FestivalViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CF1587D260BE65600998A41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CF1588E260BE65700998A41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CF15899260BE65700998A41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5CF15877260BE65600998A41 = {
+			isa = PBXGroup;
+			children = (
+				5CF15882260BE65600998A41 /* festival-mobile */,
+				5C1529F4260BE90500FB2A02 /* festival-mobile.app */,
+				5C1529F5260BE90500FB2A02 /* festival-mobileTests.xctest */,
+				5C1529F6260BE90500FB2A02 /* festival-mobileUITests.xctest */,
+			);
+			sourceTree = "<group>";
+		};
+		5CF15882260BE65600998A41 /* festival-mobile */ = {
+			isa = PBXGroup;
+			children = (
+				5CF158C1260BE6FE00998A41 /* Helper */,
+				5CF158B7260BE6FD00998A41 /* Intent */,
+				5CF158B9260BE6FE00998A41 /* Model */,
+				5CF158C3260BE6FE00998A41 /* Preview Content */,
+				5CF158BF260BE6FE00998A41 /* View */,
+				5CF158C5260BE6FE00998A41 /* ViewModel */,
+				5CF15883260BE65600998A41 /* festival_mobileApp.swift */,
+				5CF15885260BE65600998A41 /* ContentView.swift */,
+				5CF15887260BE65700998A41 /* Assets.xcassets */,
+				5CF1588C260BE65700998A41 /* Info.plist */,
+				5CF15889260BE65700998A41 /* Preview Content */,
+			);
+			path = "festival-mobile";
+			sourceTree = "<group>";
+		};
+		5CF15889260BE65700998A41 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5CF1588A260BE65700998A41 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5CF158B7260BE6FD00998A41 /* Intent */ = {
+			isa = PBXGroup;
+			children = (
+				5CF158B8260BE6FD00998A41 /* FestivalIntent.swift */,
+				5C5304C126126CB200AF3B28 /* GameListIntent.swift */,
+				5C6BE25E2615A14A000B200E /* EditorListIntent.swift */,
+				5CB870662613712D00F9C65A /* AreaListIntent.swift */,
+				5C6BE2822615BCED000B200E /* GameEditorListIntent.swift */,
+			);
+			path = Intent;
+			sourceTree = "<group>";
+		};
+		5CF158B9260BE6FE00998A41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5CF158BA260BE6FE00998A41 /* Festival.swift */,
+				5CF158BB260BE6FE00998A41 /* Game.swift */,
+				5CF158BC260BE6FE00998A41 /* GameType.swift */,
+				5CF158BD260BE6FE00998A41 /* Area.swift */,
+				5CF158BE260BE6FE00998A41 /* Editor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5CF158BF260BE6FE00998A41 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5C1529FB260BE95D00FB2A02 /* AreaNavigationView.swift */,
+				5C152A03260BFB9000FB2A02 /* AreaGamesList.swift */,
+				5CB8706126136C9200F9C65A /* AreaListView.swift */,
+				5CB870702613843400F9C65A /* EditorListView.swift */,
+				5CAFCC46260C98D200529B43 /* GameDetails.swift */,
+				5C5018292612162100C3B6AA /* MainView.swift */,
+				5C50182E261216AB00C3B6AA /* FestivalPresentationView.swift */,
+				5C5304B426126B6300AF3B28 /* GameListView.swift */,
+				5C6BE27D2615BC9A000B200E /* GameEditorListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5CF158C1260BE6FE00998A41 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5CF158C2260BE6FE00998A41 /* HttpRequest.swift */,
+				5C37AD8F261516F00057306B /* ImageHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		5CF158C3260BE6FE00998A41 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5CF158C4260BE6FE00998A41 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5CF158C5260BE6FE00998A41 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5CF158C7260BE6FE00998A41 /* FestivalViewModel.swift */,
+				5C5304C62612707B00AF3B28 /* GameListViewModel.swift */,
+				5CB8706B2613748A00F9C65A /* AreaListViewModel.swift */,
+				5CBD8DD226132DFF00C2F19D /* AreaViewModel.swift */,
+				5C6BE2782615BBBE000B200E /* GameEditorListViewModel.swift */,
+				5CBD8DE72613302F00C2F19D /* GameViewModel.swift */,
+				5CBD8DF12613324300C2F19D /* EditorListViewModel.swift */,
+				5C834DE5261480250096B348 /* EditorViewModel.swift */,
+				5CBD8DF92613325900C2F19D /* GameTypeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5CF1587F260BE65600998A41 /* festival-mobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CF158A5260BE65700998A41 /* Build configuration list for PBXNativeTarget "festival-mobile" */;
+			buildPhases = (
+				5CF1587C260BE65600998A41 /* Sources */,
+				5CF1587D260BE65600998A41 /* Frameworks */,
+				5CF1587E260BE65600998A41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "festival-mobile";
+			productName = "festival-mobile";
+			productReference = 5C1529F4260BE90500FB2A02 /* festival-mobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5CF15890260BE65700998A41 /* festival-mobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CF158A8260BE65700998A41 /* Build configuration list for PBXNativeTarget "festival-mobileTests" */;
+			buildPhases = (
+				5CF1588D260BE65700998A41 /* Sources */,
+				5CF1588E260BE65700998A41 /* Frameworks */,
+				5CF1588F260BE65700998A41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CF15893260BE65700998A41 /* PBXTargetDependency */,
+			);
+			name = "festival-mobileTests";
+			productName = "festival-mobileTests";
+			productReference = 5C1529F5260BE90500FB2A02 /* festival-mobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5CF1589B260BE65700998A41 /* festival-mobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CF158AB260BE65700998A41 /* Build configuration list for PBXNativeTarget "festival-mobileUITests" */;
+			buildPhases = (
+				5CF15898260BE65700998A41 /* Sources */,
+				5CF15899260BE65700998A41 /* Frameworks */,
+				5CF1589A260BE65700998A41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CF1589E260BE65700998A41 /* PBXTargetDependency */,
+			);
+			name = "festival-mobileUITests";
+			productName = "festival-mobileUITests";
+			productReference = 5C1529F6260BE90500FB2A02 /* festival-mobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CF15878260BE65600998A41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					5CF1587F260BE65600998A41 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					5CF15890260BE65700998A41 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 5CF1587F260BE65600998A41;
+					};
+					5CF1589B260BE65700998A41 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 5CF1587F260BE65600998A41;
+					};
+				};
+			};
+			buildConfigurationList = 5CF1587B260BE65600998A41 /* Build configuration list for PBXProject "festival-mobile" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5CF15877260BE65600998A41;
+			productRefGroup = 5CF15877260BE65600998A41;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5CF1587F260BE65600998A41 /* festival-mobile */,
+				5CF15890260BE65700998A41 /* festival-mobileTests */,
+				5CF1589B260BE65700998A41 /* festival-mobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5CF1587E260BE65600998A41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CF1588B260BE65700998A41 /* Preview Assets.xcassets in Resources */,
+				5CF158D0260BE6FE00998A41 /* Preview Assets.xcassets in Resources */,
+				5CF15888260BE65700998A41 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CF1588F260BE65700998A41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CF1589A260BE65700998A41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CF1587C260BE65600998A41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C5304C226126CB200AF3B28 /* GameListIntent.swift in Sources */,
+				5CB870712613843400F9C65A /* EditorListView.swift in Sources */,
+				5C5304C72612707B00AF3B28 /* GameListViewModel.swift in Sources */,
+				5CF158C8260BE6FE00998A41 /* FestivalIntent.swift in Sources */,
+				5C6BE2832615BCED000B200E /* GameEditorListIntent.swift in Sources */,
+				5CBD8DF22613324300C2F19D /* EditorListViewModel.swift in Sources */,
+				5C50182A2612162100C3B6AA /* MainView.swift in Sources */,
+				5C6BE25F2615A14A000B200E /* EditorListIntent.swift in Sources */,
+				5CB8706226136C9200F9C65A /* AreaListView.swift in Sources */,
+				5CF158CF260BE6FE00998A41 /* HttpRequest.swift in Sources */,
+				5C6BE27E2615BC9A000B200E /* GameEditorListView.swift in Sources */,
+				5CB8706C2613748A00F9C65A /* AreaListViewModel.swift in Sources */,
+				5CF158CC260BE6FE00998A41 /* Area.swift in Sources */,
+				5CF158CA260BE6FE00998A41 /* Game.swift in Sources */,
+				5CF15886260BE65600998A41 /* ContentView.swift in Sources */,
+				5CAFCC47260C98D200529B43 /* GameDetails.swift in Sources */,
+				5CF15884260BE65600998A41 /* festival_mobileApp.swift in Sources */,
+				5C152A04260BFB9000FB2A02 /* AreaGamesList.swift in Sources */,
+				5CBD8DD326132DFF00C2F19D /* AreaViewModel.swift in Sources */,
+				5CBD8DE82613302F00C2F19D /* GameViewModel.swift in Sources */,
+				5CF158C9260BE6FE00998A41 /* Festival.swift in Sources */,
+				5CF158D2260BE6FE00998A41 /* FestivalViewModel.swift in Sources */,
+				5CBD8DFA2613325900C2F19D /* GameTypeViewModel.swift in Sources */,
+				5CB870672613712D00F9C65A /* AreaListIntent.swift in Sources */,
+				5C834DE6261480250096B348 /* EditorViewModel.swift in Sources */,
+				5C6BE2792615BBBE000B200E /* GameEditorListViewModel.swift in Sources */,
+				5C5304B526126B6300AF3B28 /* GameListView.swift in Sources */,
+				5CF158CD260BE6FE00998A41 /* Editor.swift in Sources */,
+				5CF158CB260BE6FE00998A41 /* GameType.swift in Sources */,
+				5C1529FC260BE95D00FB2A02 /* AreaNavigationView.swift in Sources */,
+				5C50182F261216AB00C3B6AA /* FestivalPresentationView.swift in Sources */,
+				5C37AD90261516F00057306B /* ImageHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CF1588D260BE65700998A41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CF15898260BE65700998A41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5CF15893260BE65700998A41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CF1587F260BE65600998A41 /* festival-mobile */;
+			targetProxy = 5CF15892260BE65700998A41 /* PBXContainerItemProxy */;
+		};
+		5CF1589E260BE65700998A41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CF1587F260BE65600998A41 /* festival-mobile */;
+			targetProxy = 5CF1589D260BE65700998A41 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5CF158A3260BE65700998A41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5CF158A4260BE65700998A41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5CF158A6260BE65700998A41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"festival-mobile/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "festival-mobile/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ig4.festival-mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5CF158A7260BE65700998A41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"festival-mobile/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "festival-mobile/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ig4.festival-mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5CF158A9260BE65700998A41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "festival-mobileTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ig4.festival-mobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/festival-mobile.app/festival-mobile";
+			};
+			name = Debug;
+		};
+		5CF158AA260BE65700998A41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "festival-mobileTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ig4.festival-mobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/festival-mobile.app/festival-mobile";
+			};
+			name = Release;
+		};
+		5CF158AC260BE65700998A41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "festival-mobileUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ig4.festival-mobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "festival-mobile";
+			};
+			name = Debug;
+		};
+		5CF158AD260BE65700998A41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "festival-mobileUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ig4.festival-mobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "festival-mobile";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CF1587B260BE65600998A41 /* Build configuration list for PBXProject "festival-mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CF158A3260BE65700998A41 /* Debug */,
+				5CF158A4260BE65700998A41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CF158A5260BE65700998A41 /* Build configuration list for PBXNativeTarget "festival-mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CF158A6260BE65700998A41 /* Debug */,
+				5CF158A7260BE65700998A41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CF158A8260BE65700998A41 /* Build configuration list for PBXNativeTarget "festival-mobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CF158A9260BE65700998A41 /* Debug */,
+				5CF158AA260BE65700998A41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CF158AB260BE65700998A41 /* Build configuration list for PBXNativeTarget "festival-mobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CF158AC260BE65700998A41 /* Debug */,
+				5CF158AD260BE65700998A41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CF15878260BE65600998A41 /* Project object */;
+}
